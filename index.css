@@ -11,8 +11,42 @@ body{
     margin: auto;
 }
 
-/* Header*/
+.btn-oscuro{
+    background: #32364e;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 20px;
+    margin: 10px 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
 
+.btn-oscuro:hover{
+    background: #0b0e1d;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-claro{
+    background: transparent;
+    color: #363f45;
+    font-weight: 500;
+    font-size: 18px;
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 10px 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/*********/
+/* Header*/
+/*********/
 header{
     background-color: rgb(130,130,130);
 }
@@ -30,12 +64,6 @@ header .container{
     margin: 0 auto;
 }
 
-header h1{
-    font-size: 48px;
-    font-family: 'Permanent Marker', cursive;
-    color: black;
-    margin: 0px auto;
-}
 /****************/
 /*Menu Principal*/
 /****************/
@@ -43,43 +71,32 @@ header h1{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+}
+
+#menuprincipal h1{
+    font-size: 48px;
+    font-family: 'Permanent Marker', cursive;
+    color: black;
+    margin: 0px auto;
 }
 
 /*Botones*/
+.botones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60%;
+    z-index: 100;
+
+}
 #menuprincipal .btn-start-game{
-    background: #32364e;
-    color: #FFFFFF;
-    font-weight: 500;
-    font-size: 18px;
     width: 300px;
     height: 100px;
-    border-radius: 20px;
-    margin: 10px 5px;
-    border: none;
-    cursor: pointer;
-    transition: 0.5s;
 }
 
-#menuprincipal .btn-start-game:hover{
-    background: #32364e;
-    color: #FFFFFF;
-    border: none;
-    cursor: pointer;
-}
 
-#menuprincipal .btn-customize-game{
-    background: transparent;
-    color: #363f45;
-    font-weight: 500;
-    font-size: 18px;
-    width: 250px;
-    height: 50px;
-    border-radius: 10px;
-    margin: 10px 5px;
-    border: none;
-    cursor: pointer;
-    transition: 0.5s;
-}
 
 #menuprincipal .btn-customize-game:hover{
     background: #FFFFFF;
@@ -89,8 +106,36 @@ header h1{
 }
 
 /******************/
-/*Pantall de Juego*/
+/*Pantalla de Juego*/
 /******************/
+
+/*Botones*/
+#btn-nuevojuego{
+    width: 300px;
+    height: 100px;
+}
+
+#btn-desistir{
+    background: transparent;
+    color: #363f45;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 10px 5px;
+    border: none;
+    border: 1px solid #363f45;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#btn-desistir:hover{
+    background: #FFFFFF;
+    color: #363f45;
+    border: 1px solid #363f45;
+    cursor: pointer;
+}
 
 /*Teclado*/
 #teclado {
@@ -121,6 +166,7 @@ header h1{
     background: transparent;
     color: #363f45;
 }
+
 
 /*Agregarpalabras*/
 

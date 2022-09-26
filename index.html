@@ -6,20 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego Ahorcado</title>
     <link rel="stylesheet" href="index.css">
-</head>
+</head> 
 <body>
     <header>
         <div class="container">
             <img src="img/Header-LMS-logo.svg" alt="Logo Lucas Saldaña" class="logo-header">
-            <h1>El Ahorcado</h1>
         </div>
     </header>
 
     <section id="menuprincipal">
-        <h3>Puntaje maximo: <span class="maxed-points">0</span></h3>
-        <img src="img/horca.png" alt="Horca">
-        <button class="btn-start-game">Iniciar Juego</button>
-        <button class="btn-customize-game">Juego Personalizado</button>
+            <h1>El Ahorcado</h1>
+            <h3>Puntaje maximo: <span class="maxed-points">0</span></h3>
+            <img src="img/horca.png" alt="Horca">
+                <div class="botones">
+                    <button class="btn-start-game btn-oscuro">Iniciar Juego</button>
+                    <button class="btn-customize-game btn-claro">Agregar Palabras</button>
+                </div>
     </section>
 
     <section id="pantalla">
@@ -29,7 +31,7 @@
                 <h2>GANASTE</h2>
                 <p>Obtuviste: <br>"<span id="alert-points"></span> PUNTOS"</p>
             </div>
-            <div class="alerta-fail">
+            <div class="alerta-fail"> 
                 <img src="img/icon-fail.svg" alt="">
                 <h2>PERDISTE</h2>
                 <p>La palabra era: <br>"<span id="alert-secret-word"></span>"</p>
@@ -39,12 +41,12 @@
             <h3>Puntaje total: <span class="accumulated-points">0</span></h3>
         </div>
         <div id="hanged-character">
-            <img src="img/assets/hanget_0.svg" alt="Horca">
+            <img src="img/horca.png" alt="Horca">
         </div>
         <div id="hidden-word"></div>
         <div id="buttons">
-            <button id="btn-new-game">Nuevo Juego</button>
-            <button id="btn-desist">Desistir</button>
+            <button id="btn-nuevojuego" class="btn-oscuro">Nuevo Juego</button>
+            <button id="btn-desistir btn-claro" class="btn-claro">Desistir</button>
         </div>
         <div id="teclado">
             <button>Q</button>
@@ -93,4 +95,5 @@
         </div>
     </footer>
 </body>
+<script src="index.js"></script>
 </html>
