@@ -105,7 +105,30 @@ header .container{
 /*Pantalla de Juego*/
 /******************/
 
+#hidden-word{
+    margin: 15px;
+}
+
+#hidden-word div{
+    display: inline-block;
+    width: 50px;
+    padding: 10px;
+    margin: 5px;
+    border-bottom: 5px solid #363f45;
+    color: #363f45;
+    font-weight: 500;
+}
+
+#hidden-word .hidde{
+    color: transparent;
+}
+
 /*Botones*/
+.botones-juego{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 #btn-nuevojuego{
     width: 300px;
     height: 100px;

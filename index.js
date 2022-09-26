@@ -5,7 +5,7 @@ const sectionagregarpalabras = document.getElementById('agregarpalabras');
 const btnStartGame = document.querySelector('.btn-iniciarjuego');
 const btnCustomizeGame = document.querySelector('.btn-agregarpalabra');
 // const entry = document.querySelector('body');
-// const divHiddenWord = document.getElementById('hidden-word');
+const divHiddenWord = document.getElementById('hidden-word');
 const btnNewGame = document.getElementById("btn-nuevojuego");
 const btnDesistir = document.getElementById("btn-desistir");
 const alertaWin = document.querySelector('.alerta-win');
@@ -27,6 +27,11 @@ btnDesistir.onclick = desistir;
 
 /*Creamos las distintas variables para nuestro juego*/
 let letrasUsadas= [];
+let letrasAcertadas;
+let letrasErradas;
+let complete = false
+let puntos;
+let palabras =["camion","software","marmol"]
 
 
 function nuevoJuego(){
@@ -34,21 +39,19 @@ function nuevoJuego(){
     pantallaJuego.style.display = 'block';
 
     letrasUsadas = [];
-    // fail = 0;
-    // win = 0;
+    letrasAcertadas=0
+    letrasErradas=0
 
-    // if(complete == false){
-    //     points = 0;
-    // }
+     if(complete == false){ puntos = 0; }
 
-    // complete = false;
+     complete = false;
 
     // removeWordDiv();
     // hangedCharacter(0);
     // alertWin.style.display = 'none';
     // alertFail.style.display = 'none';
     // keyboardUnlock();
-    // createWord();
+    crearPalabra();
     // score.innerHTML = points;
     // maxedScore.innerHTML = maxedPoints;
 }
@@ -56,4 +59,18 @@ function nuevoJuego(){
 function desistir(){
     pantallaJuego.style.display = 'none';
     menuprincipal.style.display = 'flex';
+}
+
+function crearPalabra(){
+    let randomNumber = Math.floor(Math.random()*palabras.length);
+    palabraSeleccionada = palabras[randomNumber].toUpperCase();
+    arrayWord = palabraSeleccionada.split('');
+
+    for(let i=0; i<arrayWord.length; i++){
+        const div = document.createElement('div');
+        div.setAttribute('id', i);
+        div.setAttribute('class', 'hidde');
+        div.textContent = '.';
+        divHiddenWord.appendChild(div);
+    }
 }
