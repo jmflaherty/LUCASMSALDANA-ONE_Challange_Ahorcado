@@ -1,0 +1,228 @@
+/* Configuraciones para toda la pagina*/
+* { box-sizing: border-box;}
+
+body{
+    text-align: center;
+    margin: 0;
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* Header*/
+
+header{
+    background-color: rgb(130,130,130);
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+}
+
+.logo-header{
+    height: 150px;
+    width: auto;
+    margin: 0 auto;
+}
+
+header h1{
+    font-size: 48px;
+    font-family: 'Permanent Marker', cursive;
+    color: black;
+    margin: 0px auto;
+}
+/****************/
+/*Menu Principal*/
+/****************/
+#menuprincipal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Botones*/
+#menuprincipal .btn-start-game{
+    background: #32364e;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 18px;
+    width: 300px;
+    height: 100px;
+    border-radius: 20px;
+    margin: 10px 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#menuprincipal .btn-start-game:hover{
+    background: #32364e;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+}
+
+#menuprincipal .btn-customize-game{
+    background: transparent;
+    color: #363f45;
+    font-weight: 500;
+    font-size: 18px;
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 10px 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#menuprincipal .btn-customize-game:hover{
+    background: #FFFFFF;
+    color: #363f45;
+    border: 1px solid #363f45;
+    cursor: pointer;
+}
+
+/******************/
+/*Pantall de Juego*/
+/******************/
+
+/*Teclado*/
+#teclado {
+    max-width: 450px;
+    margin: auto;
+    text-align: center;
+}
+
+#teclado button{
+    border: none;
+    width: 50px;
+    height: 35px;
+    font-size: 20px;
+    margin: 4px 2px;
+    border-radius: 5px;
+    transition: 0.3s;
+    color: #363f45;
+    border: 1px solid #363f45;
+    background: transparent;
+}
+
+#teclado button:hover{
+    background-color: #363f45;
+    color: #FFFFFF;
+}
+
+#teclado button:disabled{
+    background: transparent;
+    color: #363f45;
+}
+
+/*Agregarpalabras*/
+
+#agregarpalabras{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#agregarpalabras h1{
+    font-size: 48px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+#agregarpalabras h3{
+    font-weight: 500;
+}
+
+#agregarpalabras input{
+    margin: 10px 0;
+    font-size: 24px;
+    width: 450px;
+    height: 100px;
+    border-radius: 20px;
+    background: #FFFFFF;
+    text-align: center;
+    border: none;
+}
+
+input:focus{
+    border: none;
+    outline: none
+}
+
+#agregarpalabras .btn-add-word{
+    background: #32364e;;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    width: 285px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 10px 5px;
+    border: none;
+    border: 1px solid #3e50b4;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#agregarpalabras .btn-add-word:hover{
+    background: #4f66e4;
+    color: #FFFFFF;
+    border: 1px solid #4f66e4;
+    cursor: pointer;
+}
+
+#agregarpalabras .btn-add-word-play{
+    background: transparent;
+    color: #363f45;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 10px 5px;
+    border: none;
+    border: 1px solid #363f45;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#agregarpalabras .btn-add-word-play:hover{
+    background: #FFFFFF;
+    color: #363f45;
+    border: 1px solid #363f45;
+    cursor: pointer;
+}
+
+/*********/
+/*Footer*/
+/*******/
+
+footer{
+	text-align: center;
+	background: rgb(130, 130, 130);
+	padding: 0px;
+}
+
+footer .logo-footer{
+    height: 150px;
+    margin: -5px;
+}
+footer p{
+    margin: 0;
+    font-size: 14px;
+}
+
+.copyright{
+	font-size: 14px;
+	padding-bottom: 10px;
+}
+
+.git-img{
+    height: 36px;
+}
