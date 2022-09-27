@@ -29,6 +29,7 @@ btnDesistir.onclick = desistir;
 let letrasUsadas= [];
 let letrasAcertadas;
 let letrasErradas;
+let palabraSeleccionada="";
 let complete = false
 let puntos;
 let palabras =["camion","software","marmol"]
@@ -45,8 +46,8 @@ function nuevoJuego(){
      if(complete == false){ puntos = 0; }
 
      complete = false;
-
-    quitarGuiones();
+    if(palabraSeleccionada){quitarGuiones()}
+;
     // hangedCharacter(0);
     // alertWin.style.display = 'none';
     // alertFail.style.display = 'none';
