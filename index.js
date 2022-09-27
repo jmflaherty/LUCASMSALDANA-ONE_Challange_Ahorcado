@@ -1,6 +1,7 @@
 /*Nos traemos los distintos elemento como variables*/
 const menuprincipal = document.getElementById("menuprincipal");
 const pantallaJuego = document.getElementById("pantalla"); 
+const pantallaprincipal = document.getElementById("pantallaprincipal")
 const sectionagregarpalabras = document.getElementById('agregarpalabras');
 const btnStartGame = document.querySelector('.btn-iniciarjuego');
 const btnCustomizeGame = document.querySelector('.btn-agregarpalabra');
@@ -36,6 +37,7 @@ let palabras =["camion","software","marmol"]
 
 
 function nuevoJuego(){
+    pantallaprincipal.style.height="1050px"
     menuprincipal.style.display = 'none';
     pantallaJuego.style.display = 'block';
 
@@ -58,6 +60,7 @@ function nuevoJuego(){
 }
 
 function desistir(){
+    pantallaprincipal.style.height="1050px"
     pantallaJuego.style.display = 'none';
     menuprincipal.style.display = 'flex';
 }
