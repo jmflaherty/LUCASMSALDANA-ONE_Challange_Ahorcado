@@ -3,6 +3,7 @@ const menuprincipal = document.getElementById("menuprincipal");
 const pantallaJuego = document.getElementById("juego"); 
 const pantallaprincipal = document.getElementById("pantallacompleta")
 const sectionagregarpalabras = document.getElementById('agregarpalabras');
+const trasladaSecciones = document.getElementById("trasladaSecciones")
 const btnStartGame = document.querySelector('.btn-iniciarjuego');
 const btnCustomizeGame = document.querySelector('.btn-agregarpalabra');
 // const entry = document.querySelector('body');
@@ -37,8 +38,8 @@ let palabras =["camion","software","marmol"]
 
 
 function nuevoJuego(){
-    menuprincipal.style.display = 'none';
-    pantallaJuego.style.display = 'block';
+    trasladaSecciones.style.transform = "translateX(-808px)";
+
 
     letrasUsadas = [];
     letrasAcertadas=0
@@ -59,10 +60,7 @@ function nuevoJuego(){
 }
 
 function desistir(){
-    pantallaprincipal.style.height="1050px"
-    pantallaJuego.style.display = 'none';
-    menuprincipal.style.display = 'flex';
-    pantallaprincipal.style.height=pantallaHeightInicial+"px";           
+    trasladaSecciones.style.transform = "translateX(-404px)";         
 }
 
 function crearPalabra(){

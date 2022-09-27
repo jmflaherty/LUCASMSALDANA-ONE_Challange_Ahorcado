@@ -12,12 +12,14 @@ body{
 }
 
 .btn-oscuro{
-    background: #32364e;
+    background-image: url("img/wood.jpg");
+    background-size: 80%;
+    background-position: center;
     color: #FFFFFF;
     font-weight: 500;
     font-size: 18px;
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 80px;
     border-radius: 20px;
     margin: 10px 5px;
     border: none;
@@ -26,18 +28,18 @@ body{
 }
 
 .btn-oscuro:hover{
-    background: #0b0e1d;
+    background-size: 70%;
     color: #FFFFFF;
     border: none;
     cursor: pointer;
 }
 
 .btn-claro{
-    background: transparent;
+    background: cornsilk;
     color: #363f45;
     font-weight: 500;
     font-size: 18px;
-    width: 250px;
+    width: 200px;
     height: 50px;
     border-radius: 20px;
     margin: 10px 5px;
@@ -54,7 +56,7 @@ body{
 }
 
 img{
-    height: 50vh;
+    height: 370px;
     width: auto;
 }
 
@@ -83,14 +85,14 @@ main h1{
 #imgfondo{
     position: absolute;
     z-index: -1;
-    left: 0;top: 0;
+    left: 0;bottom: 0;
     height: max-content;
     width: auto;
 }
 
 #ocultaSecciones{
     display: flex;
-    /* overflow: hidden; */
+    overflow: hidden;
     width: 403px;
 }
 section{
@@ -101,7 +103,7 @@ section{
 #trasladaSecciones{
     display: flex;
     transform: translateX(-404px);
-    animation: 500ms;
+    transition: 300ms;
 }
 /*********/
 /* Header*/
@@ -185,10 +187,11 @@ header .container{
 
 /*Teclado*/
 #teclado {
-    max-width: 450px;
+    max-width: 400px;
     margin: auto;
     margin-bottom: 10px;
     text-align: center;
+    background-color: burlywood;
 }
 
 #teclado button{
@@ -235,7 +238,7 @@ header .container{
 #agregarpalabras input{
     margin: 10px 0;
     font-size: 24px;
-    width: 450px;
+    width: 400px;
     height: 100px;
     border-radius: 20px;
     background: #FFFFFF;
