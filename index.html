@@ -13,80 +13,80 @@
             <img src="img/Header-LMS-logo.svg" alt="Logo Lucas Saldaña" class="logo-header">
         </div>
     </header>
+    <main>
+        <h1>El Ahorcado</h1>
+        <section id="menuprincipal">
+                <h3>Puntaje maximo: <span class="maxed-points">0</span></h3>
+                <img src="img/horca.png" alt="Horca">
+                    <div class="botones">
+                        <button class="btn-iniciarjuego btn-oscuro">Iniciar Juego</button>
+                        <button class="btn-agregarpalabra btn-claro">Agregar Palabras</button>
+                    </div>
+        </section>
 
-    <section id="menuprincipal">
-            <h1>El Ahorcado</h1>
-            <h3>Puntaje maximo: <span class="maxed-points">0</span></h3>
-            <img src="img/horca.png" alt="Horca">
-                <div class="botones">
-                    <button class="btn-iniciarjuego btn-oscuro">Iniciar Juego</button>
-                    <button class="btn-agregarpalabra btn-claro">Agregar Palabras</button>
+        <section id="pantalla">
+            <div id="alertas">
+                <div class="alerta-win">
+                    <img src="img/win.svg" alt="">
+                    <h2>GANASTE</h2>
+                    <p>Obtuviste: <br>"<span id="alert-points"></span> PUNTOS"</p>
                 </div>
-    </section>
-
-    <section id="pantalla">
-        <div id="alertas">
-            <div class="alerta-win">
-                <img src="img/win.svg" alt="">
-                <h2>GANASTE</h2>
-                <p>Obtuviste: <br>"<span id="alert-points"></span> PUNTOS"</p>
+                <div class="alerta-fail"> 
+                    <img src="img/fail.svg" alt="">
+                    <h2>PERDISTE</h2>
+                    <p>La palabra era: <br>"<span id="alert-secret-word"></span>"</p>
+                </div>
             </div>
-            <div class="alerta-fail"> 
-                <img src="img/fail.svg" alt="">
-                <h2>PERDISTE</h2>
-                <p>La palabra era: <br>"<span id="alert-secret-word"></span>"</p>
+            <div id="score-box">
+                <h3>Puntaje total: <span class="accumulated-points">0</span></h3>
             </div>
-        </div>
-        <div id="score-box">
-            <h3>Puntaje total: <span class="accumulated-points">0</span></h3>
-        </div>
-        <div id="hanged-character">
-            <img src="img/horca.png" alt="Horca">
-        </div>
-        <div id="hidden-word"></div>
-        <div class="botones-juego">
-            <button id="btn-nuevojuego" class="btn-oscuro">Nuevo Juego</button>
-            <button id="btn-desistir" class="btn-claro">Desistir</button>
-        </div>
-        <div id="teclado">
-            <button>Q</button>
-            <button>W</button>
-            <button>E</button>
-            <button>R</button>
-            <button>T</button>
-            <button>Y</button>
-            <button>U</button>
-            <button>I</button>
-            <button>O</button>
-            <button>P</button>
-            <button>A</button>
-            <button>S</button>
-            <button>D</button>
-            <button>F</button>
-            <button>G</button>
-            <button>H</button>
-            <button>J</button>
-            <button>K</button>
-            <button>L</button>
-            <button>Ñ</button>
-            <button>Z</button>
-            <button>X</button>
-            <button>C</button>
-            <button>V</button>
-            <button>B</button>
-            <button>N</button>
-            <button>M</button>
-        </div>
-    </section>
+            <div id="hanged-character">
+                <img src="img/horca.png" alt="Horca">
+            </div>
+            <div id="hidden-word"></div>
+            <div class="botones-juego">
+                <button id="btn-nuevojuego" class="btn-oscuro">Nuevo Juego</button>
+                <button id="btn-desistir" class="btn-claro">Desistir</button>
+            </div>
+            <div id="teclado">
+                <button>Q</button>
+                <button>W</button>
+                <button>E</button>
+                <button>R</button>
+                <button>T</button>
+                <button>Y</button>
+                <button>U</button>
+                <button>I</button>
+                <button>O</button>
+                <button>P</button>
+                <button>A</button>
+                <button>S</button>
+                <button>D</button>
+                <button>F</button>
+                <button>G</button>
+                <button>H</button>
+                <button>J</button>
+                <button>K</button>
+                <button>L</button>
+                <button>Ñ</button>
+                <button>Z</button>
+                <button>X</button>
+                <button>C</button>
+                <button>V</button>
+                <button>B</button>
+                <button>N</button>
+                <button>M</button>
+            </div>
+        </section>
 
-    <section id="agregarpalabras">
-        <h1>Configurar</h1>
-        <h3>Palabras personalizadas</h3>
-        <input id="input-custom-word" type="text" maxlength="10" placeholder="Ingresa aqui" onkeypress="return onlyLetters(event)">
-        <button class="btn-add-word btn-oscuro" >Agregar</button>
-        <button class="btn-add-word-play btn-claro">Jugar</button>
-    </section>
-
+        <section id="agregarpalabras">
+            <h1>Configurar</h1>
+            <h3>Palabras personalizadas</h3>
+            <input id="input-custom-word" type="text" maxlength="10" placeholder="Ingresa aqui" onkeypress="return onlyLetters(event)">
+            <button class="btn-add-word btn-oscuro" >Agregar</button>
+            <button class="btn-add-word-play btn-claro">Jugar</button>
+        </section>
+    </main>
     <footer>
         <div class="container">
             <a href="img/Saldaña CV.pdf"> <img class="logo-footer" src="img/logo-lms.png" alt="Lucas Saldaña" ></a>

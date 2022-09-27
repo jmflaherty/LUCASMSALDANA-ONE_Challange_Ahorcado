@@ -54,8 +54,24 @@ body{
 }
 
 img{
-    height: 60vh;
+    height: 50vh;
     width: auto;
+}
+
+/********/
+/* Main */
+/********/
+main{
+    background: url("img/fondo.jpg");
+    background-size:cover;
+    background-position: center;
+}
+
+main h1{
+    font-size: 48px;
+    font-family: 'Permanent Marker', cursive;
+    color: black;
+    margin: 0px auto;
 }
 
 /*********/
@@ -86,13 +102,6 @@ header .container{
     flex-direction: column;
     align-items: center;
     position: relative;
-}
-
-#menuprincipal h1{
-    font-size: 48px;
-    font-family: 'Permanent Marker', cursive;
-    color: black;
-    margin: 0px auto;
 }
 
 /*Botones*/
