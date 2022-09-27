@@ -46,7 +46,7 @@ function nuevoJuego(){
 
      complete = false;
 
-    // removeWordDiv();
+    quitarGuiones();
     // hangedCharacter(0);
     // alertWin.style.display = 'none';
     // alertFail.style.display = 'none';
@@ -72,5 +72,13 @@ function crearPalabra(){
         div.setAttribute('class', 'hidde');
         div.textContent = '.';
         divHiddenWord.appendChild(div);
+    }
+}
+
+function quitarGuiones(){
+    arrayWord = [];
+    for(let i=0; i<palabraSeleccionada.length; i++){
+        let removeDivHidden = document.getElementById(i);
+        divHiddenWord.removeChild(removeDivHidden);
     }
 }
