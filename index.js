@@ -1,7 +1,7 @@
 /*Nos traemos los distintos elemento como variables*/
 const menuprincipal = document.getElementById("menuprincipal");
-const pantallaJuego = document.getElementById("pantalla"); 
-const pantallaprincipal = document.getElementById("pantallaprincipal")
+const pantallaJuego = document.getElementById("juego"); 
+const pantallaprincipal = document.getElementById("pantallacompleta")
 const sectionagregarpalabras = document.getElementById('agregarpalabras');
 const btnStartGame = document.querySelector('.btn-iniciarjuego');
 const btnCustomizeGame = document.querySelector('.btn-agregarpalabra');
@@ -17,8 +17,8 @@ const score = document.querySelector('.accumulated-points');
 const maxedScore = document.querySelector('.maxed-points');
 
 /*Ocultamos la pantalla de juego y la seccion de Agregar palabras*/
-pantallaJuego.style.display="none";
-sectionagregarpalabras.style.display="none";
+// pantallaJuego.style.display="none";
+// sectionagregarpalabras.style.display="none";
 alertaWin.style.display = 'none';
 alertaFail.style.display = 'none';
 
@@ -37,7 +37,6 @@ let palabras =["camion","software","marmol"]
 
 
 function nuevoJuego(){
-    pantallaprincipal.style.height="1050px"
     menuprincipal.style.display = 'none';
     pantallaJuego.style.display = 'block';
 
@@ -63,6 +62,7 @@ function desistir(){
     pantallaprincipal.style.height="1050px"
     pantallaJuego.style.display = 'none';
     menuprincipal.style.display = 'flex';
+    pantallaprincipal.style.height=pantallaHeightInicial+"px";           
 }
 
 function crearPalabra(){

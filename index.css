@@ -61,11 +61,6 @@ img{
 /********/
 /* Main */
 /********/
-main{
-    background: url("img/fondo.jpg");
-    background-size:cover;
-    background-position: center;
-}
 
 main h1{
     font-size: 48px;
@@ -74,6 +69,40 @@ main h1{
     margin: 0px auto;
 }
 
+#pantallacompleta{
+    /* background: url("img/fondo.jpg");
+    background-position: top; */
+    /* max-height: 1050px;
+    max-width: 1920px; */
+    overflow: hidden;
+    transition: 500ms;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+#imgfondo{
+    position: absolute;
+    z-index: -1;
+    left: 0;top: 0;
+    height: max-content;
+    width: auto;
+}
+
+#ocultaSecciones{
+    display: flex;
+    /* overflow: hidden; */
+    width: 403px;
+}
+section{
+    width: 404px;
+    margin: 0 1px;
+}
+
+#trasladaSecciones{
+    display: flex;
+    transform: translateX(-404px);
+    animation: 500ms;
+}
 /*********/
 /* Header*/
 /*********/
@@ -102,6 +131,7 @@ header .container{
     flex-direction: column;
     align-items: center;
     position: relative;
+    transition: 300ms;
 }
 
 /*Botones*/
@@ -115,9 +145,9 @@ header .container{
 
 }
 
-/******************/
+/*******************/
 /*Pantalla de Juego*/
-/******************/
+/*******************/
 
 #hidden-word{
     margin: 15px;
