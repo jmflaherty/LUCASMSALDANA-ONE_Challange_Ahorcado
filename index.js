@@ -10,17 +10,12 @@ const body = document.querySelector('body');
 const divHiddenWord = document.getElementById('hidden-word');
 const btnNewGame = document.getElementById("btn-nuevojuego");
 const btnDesistir = document.getElementById("btn-desistir");
-const alertaWin = document.querySelector('.alerta-win');
-const alertaFail = document.querySelector('.alerta-fail');
+const alertaVive = document.getElementById('alerta-vive');
+const alertaMuere = document.getElementById('alerta-muere');
 const alertSecretWord = document.getElementById('alert-secret-word');
 const alertPoints = document.getElementById('alert-points');
 const score = document.querySelector('.accumulated-points');
 const maxedScore = document.querySelector('.maxed-points');
-
-/*Ocultamos la pantalla de juego y la seccion de Agregar palabras*/
-
-alertaWin.style.display = 'none';
-alertaFail.style.display = 'none';
 
 /*Le agregamos funcionalidades a los botones*/
 btnStartGame.onclick= nuevoJuego;
@@ -44,7 +39,7 @@ let escucharTeclado=false;
 
 
 function nuevoJuego(){
-    trasladaSecciones.style.transform = "translateX(-808px)";
+    trasladaSecciones.style.transform = "translateX(-811px)";
     reinicioVariables();
  
     crearPalabra();
@@ -65,6 +60,8 @@ function reinicioVariables(){
     escucharTeclado=true;
     intentos = 0;
     if(palabraSeleccionada){quitarGuiones()};
+    alertaVive.style.display="none";
+    alertaMuere.style.display="none";
 }
 
 function volverAlMenuPrincipal(){
@@ -102,7 +99,6 @@ function verificarLetra(evento){
 }
 
 function buscarLetraenPalabra(teclaPresionada){
-    intentos+=1
     if(palabraSeleccionada.includes(teclaPresionada)){
         for(let i = 0 ; i<palabraSeleccionada.length;i++){
             if(palabraSeleccionada.charAt(i)==teclaPresionada){
@@ -112,12 +108,14 @@ function buscarLetraenPalabra(teclaPresionada){
                 letrasAcertadas+=1;
             }
         }
-        if(letrasAcertadas==palabraSeleccionada.length){
-            console.log("Ganaste")
-        }
-        if(intentos >= 6){
-            console.log("perdiste");
-        }
+    }else{
+        intentos+=1
+    }
+    if(letrasAcertadas==palabraSeleccionada.length){
+        finDeJuego("VIVO");
+    }
+    if(intentos >= 6){
+        finDeJuego("MUERTO");
     }
 }
 
@@ -126,5 +124,13 @@ function quitarGuiones(){
     for(let i=0; i<palabraSeleccionada.length; i++){
         let removeDivHidden = document.getElementById(i);
         divHiddenWord.removeChild(removeDivHidden);
+    }
+}
+
+function finDeJuego(estado){
+    if(estado=="VIVO"){
+        alertaVive.style.display="flex";
+    }else{
+        alertaMuere.style.display="flex";
     }
 }

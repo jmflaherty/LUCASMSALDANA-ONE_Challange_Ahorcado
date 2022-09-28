@@ -46,18 +46,24 @@
                     </section>
 
                     <section id="juego">
+
                         <div id="alertas">
-                            <div class="alerta-win">
+                            <div id="alerta-vive" class="cartelalerta">
                                 <img src="img/win.svg" alt="">
-                                <h2>GANASTE</h2>
-                                <p>Obtuviste: <br>"<span id="alert-points"></span> PUNTOS"</p>
+                                <div>
+                                    <h2>GANASTE</h2>
+                                    <p>Obtuviste: <br>"<span id="alert-points"></span> PUNTOS"</p>
+                                </div>
                             </div>
-                            <div class="alerta-fail"> 
+                            <div id="alerta-muere" class="cartelalerta"> 
                                 <img src="img/fail.svg" alt="">
-                                <h2>PERDISTE</h2>
-                                <p>La palabra era: <br>"<span id="alert-secret-word"></span>"</p>
+                                <div>
+                                    <h2>PERDISTE</h2>
+                                    <p>La palabra era: <br>"<span id="alert-secret-word"></span>"</p>
+                                </div>
                             </div>
                         </div>
+
                         <div id="score-box">
                             <h3>Puntaje total: <span class="accumulated-points">0</span></h3>
                         </div>

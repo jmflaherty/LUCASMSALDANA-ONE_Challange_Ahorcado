@@ -64,53 +64,6 @@ img{
     width: auto;
 }
 
-/********/
-/* Main */
-/********/
-main{
-    font-family: 'MedievalSharp', cursive;
-}
-
-main h1{
-    font-size: 70px;
-    color: black;
-    margin: 0px auto;
-}
-
-#pantallacompleta{
-    /* background: url("img/fondo.jpg");
-    background-position: top; */
-    /* max-height: 1050px;
-    max-width: 1920px; */
-    overflow: hidden;
-    transition: 500ms;
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-#imgfondo{
-    position: absolute;
-    z-index: -1;
-    left: 0;bottom: 0;
-    height: max-content;
-    width: auto;
-}
-
-#ocultaSecciones{
-    display: flex;
-    overflow: hidden;
-    width: 403px;
-}
-section{
-    width: 404px;
-    margin: 0 1px;
-}
-
-#trasladaSecciones{
-    display: flex;
-    transform: translateX(-404px);
-    transition: 300ms;
-}
 /*********/
 /* Header*/
 /*********/
@@ -136,16 +89,104 @@ header .container{
     filter: drop-shadow(0px 0px 8px black);
 }
 
-/****************/
-/*Menu Principal*/
-/****************/
-#menuprincipal{
+/********/
+/* Main */
+/********/
+main{
+    font-family: 'MedievalSharp', cursive;
+}
+
+main h1{
+    font-size: 70px;
+    color: black;
+    margin: 0px auto;
+}
+
+#pantallacompleta{
+    overflow: hidden;
+    transition: 500ms;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+#imgfondo{
+    position: absolute;
+    z-index: -1;
+    left: 0;bottom: 0;
+    height: max-content;
+    width: auto;
+}
+
+#ocultaSecciones{
+    display: flex;
+    overflow: hidden;
+    width: 403px;
+}
+section{
+    width: 404px;
+    margin: 0 1px;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     transition: 300ms;
 }
+
+#trasladaSecciones{
+    display: flex;
+    transform: translateX(-404px);
+    transition: 300ms;
+}
+
+
+/*****************/
+/*Agregarpalabras*/
+/*****************/
+#agregarpalabras{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#agregarpalabras h1{
+    font-size: 48px;
+}
+
+.tablero{
+    width: 380px;
+    height: 60px;
+    background-image: url(img/tablero.png);
+    background-size: 380px 60px;
+}
+#agregarpalabras h3{
+    font-weight: 500;
+}
+
+#agregarpalabras input{
+    margin: 10px 0;
+    font-size: 24px;
+    width: 380px;
+    height: 60px;
+    border-radius: 20px;
+    background: #FFFFFF;
+    text-align: center;
+    border: none;
+}
+
+input:focus{
+    border: none;
+    outline: none
+}
+
+#agregarpalabras .btn-add-word{
+    width: 285px;
+    height: 50px;
+}
+
+
+/****************/
+/*Menu Principal*/
+/****************/
 
 /*Botones*/
 .botones{
@@ -161,6 +202,9 @@ header .container{
 /*******************/
 /*Pantalla de Juego*/
 /*******************/
+#juego{
+    position: relative;
+}
 
 #hidden-word{
     font-size: 34px;
@@ -179,7 +223,29 @@ header .container{
     font-weight: 500;
 }
 
+/*Alertas*/
 
+#alertas{
+    background-color: #363f45;
+    border-radius: 50px;
+    margin: auto;
+    width: 400px;
+    position: absolute;
+    top: 36%;
+    left: 0%;
+}
+.cartelalerta{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#alertas img{
+    height: 150px;
+    width: 150px;
+}
+#alerta-vive, #alerta-muere{
+    display: none;
+}
 
 /*Botones*/
 .botones-juego{
@@ -229,49 +295,6 @@ header .container{
     color: #363f45;
 }
 
-
-/*Agregarpalabras*/
-
-#agregarpalabras{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#agregarpalabras h1{
-    font-size: 48px;
-}
-
-.tablero{
-    width: 380px;
-    height: 60px;
-    background-image: url(img/tablero.png);
-    background-size: 380px 60px;
-}
-#agregarpalabras h3{
-    font-weight: 500;
-}
-
-#agregarpalabras input{
-    margin: 10px 0;
-    font-size: 24px;
-    width: 380px;
-    height: 60px;
-    border-radius: 20px;
-    background: #FFFFFF;
-    text-align: center;
-    border: none;
-}
-
-input:focus{
-    border: none;
-    outline: none
-}
-
-#agregarpalabras .btn-add-word{
-    width: 285px;
-    height: 50px;
-}
 
 
 /*********/
