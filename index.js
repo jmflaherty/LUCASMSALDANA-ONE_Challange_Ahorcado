@@ -28,6 +28,7 @@ btnDesistir.onclick = volverAlMenuPrincipal;
 btnAgregarPalabraVolver.onclick = volverAlMenuPrincipal;
 btnAgregarPalabra.onclick= Seccionagregarpalabra;
 body.onkeyup = verificarLetra;
+btnNewGame.onclick=nuevoJuego;
 
 /*Creamos las distintas variables para nuestro juego*/
 let letrasUsadas;
@@ -36,22 +37,16 @@ let letrasErradas;
 let palabraSeleccionada="";
 let complete = false
 let puntos;
+let intentos=0;
 let palabras =["verdugo","caballero","espada","laud","cruzada"];
-let abecedario="ABCDEFGHIJKLMNÑOPQRSTUVXYZ";
+let abecedario="ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
 let escucharTeclado=false;
 
 
 function nuevoJuego(){
     trasladaSecciones.style.transform = "translateX(-808px)";
-
-    letrasUsadas = "";
-    letrasAcertadas=0
-    letrasErradas=0
-     if(complete == false){ puntos = 0; }
-     complete = false;
-     escucharTeclado=true;
-
-    if(palabraSeleccionada){quitarGuiones()};
+    reinicioVariables();
+ 
     crearPalabra();
     // hangedCharacter(0);
     // alertWin.style.display = 'none';
@@ -59,6 +54,17 @@ function nuevoJuego(){
     // keyboardUnlock();
     // score.innerHTML = points;
     // maxedScore.innerHTML = maxedPoints;
+}
+
+function reinicioVariables(){
+    letrasUsadas = "";
+    letrasAcertadas=0
+    letrasErradas=0
+    if(complete == false){ puntos = 0; }
+    complete = false;
+    escucharTeclado=true;
+    intentos = 0;
+    if(palabraSeleccionada){quitarGuiones()};
 }
 
 function volverAlMenuPrincipal(){
@@ -77,16 +83,15 @@ function crearPalabra(){
     for(let i=0; i<arrayLetras.length; i++){
         const div = document.createElement('div');
         div.setAttribute('id', i);
-        div.setAttribute('class', 'hidde');
-        div.textContent = '.';
+        div.textContent = ' ';
         divHiddenWord.appendChild(div);
     }
 }
 
 function verificarLetra(evento){
+
     if(escucharTeclado){
         teclaPresionada = evento.key.toUpperCase();
-        console.log(teclaPresionada)
         if(abecedario.includes(teclaPresionada) && !letrasUsadas.toString().includes(teclaPresionada)){
            letrasUsadas+=teclaPresionada;
            buscarLetraenPalabra(teclaPresionada);
@@ -97,13 +102,27 @@ function verificarLetra(evento){
 }
 
 function buscarLetraenPalabra(teclaPresionada){
+    intentos+=1
     if(palabraSeleccionada.includes(teclaPresionada)){
-        console.log("le pegaste a una letra");
-    }else{console.log("no le pegaste");}
+        for(let i = 0 ; i<palabraSeleccionada.length;i++){
+            if(palabraSeleccionada.charAt(i)==teclaPresionada){
+                document.getElementById(i).innerHTML=teclaPresionada;
+                document.getElementById(i).removeAttribute("class","esconderpalabra");
+                document.getElementById(i).style.border="none";
+                letrasAcertadas+=1;
+            }
+        }
+        if(letrasAcertadas==palabraSeleccionada.length){
+            console.log("Ganaste")
+        }
+        if(intentos >= 6){
+            console.log("perdiste");
+        }
+    }
 }
 
 function quitarGuiones(){
-    arrayWord = [];
+    arrayLetras = [];
     for(let i=0; i<palabraSeleccionada.length; i++){
         let removeDivHidden = document.getElementById(i);
         divHiddenWord.removeChild(removeDivHidden);
