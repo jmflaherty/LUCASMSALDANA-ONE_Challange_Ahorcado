@@ -67,9 +67,11 @@ img{
 /********/
 /* Main */
 /********/
+main{
+    font-family: 'MedievalSharp', cursive;
+}
 
 main h1{
-    font-family: 'MedievalSharp', cursive;
     font-size: 70px;
     color: black;
     margin: 0px auto;
@@ -237,9 +239,14 @@ header .container{
 
 #agregarpalabras h1{
     font-size: 48px;
-    font-family: 'Permanent Marker', cursive;
 }
 
+.tablero{
+    width: 380px;
+    height: 60px;
+    background-image: url(img/tablero.png);
+    background-size: 380px 60px;
+}
 #agregarpalabras h3{
     font-weight: 500;
 }
@@ -247,8 +254,8 @@ header .container{
 #agregarpalabras input{
     margin: 10px 0;
     font-size: 24px;
-    width: 400px;
-    height: 100px;
+    width: 380px;
+    height: 60px;
     border-radius: 20px;
     background: #FFFFFF;
     text-align: center;
