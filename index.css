@@ -29,6 +29,7 @@ body{
 
 .btn-oscuro:hover{
     background-size: 70%;
+    font-size: 20px;
     color: #FFFFFF;
     border: none;
     cursor: pointer;
