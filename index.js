@@ -99,7 +99,7 @@ function verificarLetra(evento){
 function buscarLetraenPalabra(teclaPresionada){
     if(palabraSeleccionada.includes(teclaPresionada)){
         console.log("le pegaste a una letra");
-    }else{console.log("no le pegaste";)}
+    }else{console.log("no le pegaste");}
 }
 
 function quitarGuiones(){
