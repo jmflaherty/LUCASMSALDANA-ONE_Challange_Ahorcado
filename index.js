@@ -24,9 +24,9 @@ alertaFail.style.display = 'none';
 
 /*Le agregamos funcionalidades a los botones*/
 btnStartGame.onclick= nuevoJuego;
-btnDesistir.onclick = desistir;
-btnAgregarPalabraVolver.onclick = desistir;
-btnAgregarPalabra.onclick= agregarpalabra;
+btnDesistir.onclick = volverAlMenuPrincipal;
+btnAgregarPalabraVolver.onclick = volverAlMenuPrincipal;
+btnAgregarPalabra.onclick= Seccionagregarpalabra;
 
 /*Creamos las distintas variables para nuestro juego*/
 let letrasUsadas= [];
@@ -35,12 +35,11 @@ let letrasErradas;
 let palabraSeleccionada="";
 let complete = false
 let puntos;
-let palabras =["camion","software","marmol"]
+let palabras =["verdugo","caballero","espada","laud","cruzada"]
 
 
 function nuevoJuego(){
     trasladaSecciones.style.transform = "translateX(-808px)";
-
 
     letrasUsadas = [];
     letrasAcertadas=0
@@ -50,28 +49,28 @@ function nuevoJuego(){
 
      complete = false;
     if(palabraSeleccionada){quitarGuiones()};
+    crearPalabra();
     // hangedCharacter(0);
     // alertWin.style.display = 'none';
     // alertFail.style.display = 'none';
     // keyboardUnlock();
-    crearPalabra();
     // score.innerHTML = points;
     // maxedScore.innerHTML = maxedPoints;
 }
 
-function desistir(){
+function volverAlMenuPrincipal(){
     trasladaSecciones.style.transform = "translateX(-404px)";         
 }
 
-function agregarpalabra(){
+function Seccionagregarpalabra(){
     trasladaSecciones.style.transform = "translateX(0px)";
 }
 function crearPalabra(){
-    let randomNumber = Math.floor(Math.random()*palabras.length);
-    palabraSeleccionada = palabras[randomNumber].toUpperCase();
-    arrayWord = palabraSeleccionada.split('');
+    let numeroAlazar = Math.floor(Math.random()*palabras.length);
+    palabraSeleccionada = palabras[numeroAlazar].toUpperCase();
+    arrayLetras = palabraSeleccionada.split('');  /*El metodo .split me devuelve un array */
 
-    for(let i=0; i<arrayWord.length; i++){
+    for(let i=0; i<arrayLetras.length; i++){
         const div = document.createElement('div');
         div.setAttribute('id', i);
         div.setAttribute('class', 'hidde');
