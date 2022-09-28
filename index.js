@@ -6,7 +6,7 @@ const trasladaSecciones = document.getElementById("trasladaSecciones")
 const btnStartGame = document.querySelector('.btn-iniciarjuego');
 const btnAgregarPalabra = document.getElementById('btnAgregarPalabra');
 const btnAgregarPalabraVolver = document.getElementById("btnAgregarPalabraVolver")
-// const entry = document.querySelector('body');
+const body = document.querySelector('body');
 const divHiddenWord = document.getElementById('hidden-word');
 const btnNewGame = document.getElementById("btn-nuevojuego");
 const btnDesistir = document.getElementById("btn-desistir");
@@ -27,27 +27,30 @@ btnStartGame.onclick= nuevoJuego;
 btnDesistir.onclick = volverAlMenuPrincipal;
 btnAgregarPalabraVolver.onclick = volverAlMenuPrincipal;
 btnAgregarPalabra.onclick= Seccionagregarpalabra;
+body.onkeyup = verificarLetra;
 
 /*Creamos las distintas variables para nuestro juego*/
-let letrasUsadas= [];
+let letrasUsadas;
 let letrasAcertadas;
 let letrasErradas;
 let palabraSeleccionada="";
 let complete = false
 let puntos;
-let palabras =["verdugo","caballero","espada","laud","cruzada"]
+let palabras =["verdugo","caballero","espada","laud","cruzada"];
+let abecedario="ABCDEFGHIJKLMNÑOPQRSTUVXYZ";
+let escucharTeclado=false;
 
 
 function nuevoJuego(){
     trasladaSecciones.style.transform = "translateX(-808px)";
 
-    letrasUsadas = [];
+    letrasUsadas = "";
     letrasAcertadas=0
     letrasErradas=0
-
      if(complete == false){ puntos = 0; }
-
      complete = false;
+     escucharTeclado=true;
+
     if(palabraSeleccionada){quitarGuiones()};
     crearPalabra();
     // hangedCharacter(0);
@@ -59,7 +62,8 @@ function nuevoJuego(){
 }
 
 function volverAlMenuPrincipal(){
-    trasladaSecciones.style.transform = "translateX(-404px)";         
+    trasladaSecciones.style.transform = "translateX(-404px)";    
+    escucharTeclado=false;     
 }
 
 function Seccionagregarpalabra(){
@@ -77,6 +81,25 @@ function crearPalabra(){
         div.textContent = '.';
         divHiddenWord.appendChild(div);
     }
+}
+
+function verificarLetra(evento){
+    if(escucharTeclado){
+        teclaPresionada = evento.key.toUpperCase();
+        console.log(teclaPresionada)
+        if(abecedario.includes(teclaPresionada) && !letrasUsadas.toString().includes(teclaPresionada)){
+           letrasUsadas+=teclaPresionada;
+           buscarLetraenPalabra(teclaPresionada);
+        }else{
+            console.log("no entro");
+        }
+    }
+}
+
+function buscarLetraenPalabra(teclaPresionada){
+    if(palabraSeleccionada.includes(teclaPresionada)){
+        console.log("le pegaste a una letra");
+    }else{console.log("no le pegaste";)}
 }
 
 function quitarGuiones(){
