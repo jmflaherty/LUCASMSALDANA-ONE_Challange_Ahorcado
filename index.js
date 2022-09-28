@@ -2,10 +2,10 @@
 const menuprincipal = document.getElementById("menuprincipal");
 const pantallaJuego = document.getElementById("juego"); 
 const pantallaprincipal = document.getElementById("pantallacompleta")
-const sectionagregarpalabras = document.getElementById('agregarpalabras');
 const trasladaSecciones = document.getElementById("trasladaSecciones")
 const btnStartGame = document.querySelector('.btn-iniciarjuego');
-const btnCustomizeGame = document.querySelector('.btn-agregarpalabra');
+const btnAgregarPalabra = document.getElementById('btnAgregarPalabra');
+const btnAgregarPalabraVolver = document.getElementById("btnAgregarPalabraVolver")
 // const entry = document.querySelector('body');
 const divHiddenWord = document.getElementById('hidden-word');
 const btnNewGame = document.getElementById("btn-nuevojuego");
@@ -18,14 +18,15 @@ const score = document.querySelector('.accumulated-points');
 const maxedScore = document.querySelector('.maxed-points');
 
 /*Ocultamos la pantalla de juego y la seccion de Agregar palabras*/
-// pantallaJuego.style.display="none";
-// sectionagregarpalabras.style.display="none";
+
 alertaWin.style.display = 'none';
 alertaFail.style.display = 'none';
 
 /*Le agregamos funcionalidades a los botones*/
 btnStartGame.onclick= nuevoJuego;
 btnDesistir.onclick = desistir;
+btnAgregarPalabraVolver.onclick = desistir;
+btnAgregarPalabra.onclick= agregarpalabra;
 
 /*Creamos las distintas variables para nuestro juego*/
 let letrasUsadas= [];
@@ -48,8 +49,7 @@ function nuevoJuego(){
      if(complete == false){ puntos = 0; }
 
      complete = false;
-    if(palabraSeleccionada){quitarGuiones()}
-;
+    if(palabraSeleccionada){quitarGuiones()};
     // hangedCharacter(0);
     // alertWin.style.display = 'none';
     // alertFail.style.display = 'none';
@@ -63,6 +63,9 @@ function desistir(){
     trasladaSecciones.style.transform = "translateX(-404px)";         
 }
 
+function agregarpalabra(){
+    trasladaSecciones.style.transform = "translateX(0px)";
+}
 function crearPalabra(){
     let randomNumber = Math.floor(Math.random()*palabras.length);
     palabraSeleccionada = palabras[randomNumber].toUpperCase();
