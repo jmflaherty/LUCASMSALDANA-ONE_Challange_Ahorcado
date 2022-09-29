@@ -78,7 +78,9 @@ header{
     display: flex;
     align-items: center;
 }
-
+header h1{
+    margin:0px;
+}
 header .container{
     display: flex;
     flex-direction: column;
@@ -192,7 +194,7 @@ input:focus{
 #botonesAgregarPalabra{
     position: absolute;
     left: 0;
-    top: 65%;
+    top: 57%;
 }
 #btnAgregarPalabra{
     width: 285px;
