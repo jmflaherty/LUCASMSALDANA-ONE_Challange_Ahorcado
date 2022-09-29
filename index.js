@@ -4,7 +4,8 @@ const pantallaJuego = document.getElementById("juego");
 const pantallaprincipal = document.getElementById("pantallacompleta")
 const trasladaSecciones = document.getElementById("trasladaSecciones")
 const btnStartGame = document.querySelector('.btn-iniciarjuego');
-const btnAgregarPalabra = document.getElementById('btnAgregarPalabra');
+const btnMenuAgregarPalabra = document.getElementById('btnMenuAgregarPalabra');
+const btnAgregarPlabra = document.getElementById("btnAgregarPalabra")
 const btnAgregarPalabraVolver = document.getElementById("btnAgregarPalabraVolver")
 const body = document.querySelector('body');
 const divHiddenWord = document.getElementById('hidden-word');
@@ -20,8 +21,11 @@ const maxedScore = document.querySelector('.maxed-points');
 /*Le agregamos funcionalidades a los botones*/
 btnStartGame.onclick= nuevoJuego;
 btnDesistir.onclick = volverAlMenuPrincipal;
+
 btnAgregarPalabraVolver.onclick = volverAlMenuPrincipal;
-btnAgregarPalabra.onclick= Seccionagregarpalabra;
+btnMenuAgregarPalabra.onclick= seccionagregarpalabra;
+btnAgregarPlabra.onclick= agregarPalabra;
+
 body.onkeyup = verificarLetra;
 btnNewGame.onclick=nuevoJuego;
 
@@ -69,8 +73,12 @@ function volverAlMenuPrincipal(){
     escucharTeclado=false;     
 }
 
-function Seccionagregarpalabra(){
+function seccionagregarpalabra(){
     trasladaSecciones.style.transform = "translateX(0px)";
+}
+
+function agregarPalabra(){
+    
 }
 function crearPalabra(){
     let numeroAlazar = Math.floor(Math.random()*palabras.length);
