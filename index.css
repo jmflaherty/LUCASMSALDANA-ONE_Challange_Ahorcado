@@ -197,6 +197,7 @@ input:focus{
 #sogamenu{
     position: absolute;
     left: 0;
+    z-index: -1;
 }
 /*Cartel Puntos*/
 #cartelpuntos{
