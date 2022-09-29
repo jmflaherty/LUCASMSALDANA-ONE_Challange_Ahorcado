@@ -1,7 +1,6 @@
 /*Nos traemos los distintos elemento como variables*/
 /***************************************************/
 /*BOTONES de los Menus*/
-
     /*boton del menu principal*/
 const btnStartGame = document.querySelector('.btn-iniciarjuego');
 const btnMenuAgregarPalabra = document.getElementById('btnMenuAgregarPalabra');
@@ -17,13 +16,13 @@ const btnDesistir = document.getElementById("btn-desistir");
 /*ALERTAS*/
 const alertaVive = document.getElementById('alerta-vive');
 const alertaMuere = document.getElementById('alerta-muere');
+const palabraSecretaAlertaJuego = document.getElementById('palabraSecretaAlertaJuego');
+const puntosAlertaJuego = document.getElementById('puntosAlertaJuego');
 
 const pantallaprincipal = document.getElementById("pantallacompleta")
 const trasladaSecciones = document.getElementById("trasladaSecciones")
 const body = document.querySelector('body');
 const divHiddenWord = document.getElementById('hidden-word');
-const palabraSecretaAlertaJuego = document.getElementById('palabraSecretaAlertaJuego');
-const puntosAlertaJuego = document.getElementById('puntosAlertaJuego');
 const score = document.querySelector('.accumulated-points');
 const maxedScore = document.querySelector('.puntajemaximo');
 const inputAgregarPalabra = document.getElementById("inputAgregarPalabra")
