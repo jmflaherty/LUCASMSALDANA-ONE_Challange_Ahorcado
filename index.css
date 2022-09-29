@@ -187,15 +187,26 @@ input:focus{
 /****************/
 /*Menu Principal*/
 /****************/
+#imagenes{
+    position: relative;
+
+}
+#horcamenu{
+    margin-top: 3px;
+}
+#sogamenu{
+    position: absolute;
+    left: 0;
+}
 /*Cartel Puntos*/
 #cartelpuntos{
     position: absolute;
-    top: 35%;
+    bottom: 0;
     left: 40%;
 }
 #cartelpuntos img{
     height: auto;
-    width: 80%;
+    width: 100%;
 }
 
 #cartelpuntos h3{
