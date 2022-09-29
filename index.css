@@ -187,6 +187,24 @@ input:focus{
 /****************/
 /*Menu Principal*/
 /****************/
+/*Cartel Puntos*/
+#cartelpuntos{
+    position: absolute;
+    top: 35%;
+    left: 40%;
+}
+#cartelpuntos img{
+    height: auto;
+    width: 80%;
+}
+
+#cartelpuntos h3{
+    height: auto;
+    width: 80%;
+    position: absolute;
+    top: 10%;
+    left: 9%;
+}
 
 /*Botones*/
 .botones{
