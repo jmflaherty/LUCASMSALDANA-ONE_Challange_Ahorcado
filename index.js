@@ -1,22 +1,32 @@
 /*Nos traemos los distintos elemento como variables*/
-const menuprincipal = document.getElementById("menuprincipal");
-const pantallaJuego = document.getElementById("juego"); 
-const pantallaprincipal = document.getElementById("pantallacompleta")
-const trasladaSecciones = document.getElementById("trasladaSecciones")
+/***************************************************/
+/*BOTONES de los Menus*/
+
+    /*boton del menu principal*/
 const btnStartGame = document.querySelector('.btn-iniciarjuego');
 const btnMenuAgregarPalabra = document.getElementById('btnMenuAgregarPalabra');
+
+    /*boton del menu agregar palabras*/
 const btnAgregarPlabra = document.getElementById("btnAgregarPalabra")
 const btnAgregarPalabraVolver = document.getElementById("btnAgregarPalabraVolver")
-const body = document.querySelector('body');
-const divHiddenWord = document.getElementById('hidden-word');
+
+    /*botones de la pantalla de Juego */
 const btnNewGame = document.getElementById("btn-nuevojuego");
 const btnDesistir = document.getElementById("btn-desistir");
+
+/*ALERTAS*/
 const alertaVive = document.getElementById('alerta-vive');
 const alertaMuere = document.getElementById('alerta-muere');
+
+const pantallaprincipal = document.getElementById("pantallacompleta")
+const trasladaSecciones = document.getElementById("trasladaSecciones")
+const body = document.querySelector('body');
+const divHiddenWord = document.getElementById('hidden-word');
 const alertSecretWord = document.getElementById('alert-secret-word');
 const alertPoints = document.getElementById('alert-points');
 const score = document.querySelector('.accumulated-points');
 const maxedScore = document.querySelector('.maxed-points');
+const inputAgregarPalabra = document.getElementById("inputAgregarPalabra")
 
 /*Le agregamos funcionalidades a los botones*/
 btnStartGame.onclick= nuevoJuego;
@@ -78,7 +88,11 @@ function seccionagregarpalabra(){
 }
 
 function agregarPalabra(){
-    
+    if(!inputAgregarPalabra.value.trim() == ""){
+        palabras.push(inputAgregarPalabra.value.trim().toLowerCase());
+    }else{
+        alert("Ingrese una palabra")
+    }
 }
 function crearPalabra(){
     let numeroAlazar = Math.floor(Math.random()*palabras.length);
