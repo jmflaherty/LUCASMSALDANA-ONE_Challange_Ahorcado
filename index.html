@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
-</head> 
+</head>
 <body>
     <header>
         <div class="container">
@@ -29,9 +29,12 @@
                         <div class="tablero">
                             <h3>¿Así que te atreves a desafiar al verdugo? </h3>
                         </div>
-                        <input id="inputAgregarPalabra" type="text" maxlength="10" placeholder="Agrega una palabra" >
-                        <button class="btn-oscuro" id="btnAgregarPalabra">Agregar</button>
-                        <button class="btn-claro" id="btnAgregarPalabraVolver">Volver</button>
+                        <img src="img/Verdugo.png" alt="Verdugo">
+                        <div id="botonesAgregarPalabra">
+                            <input id="inputAgregarPalabra" type="text" maxlength="10" placeholder="Agrega una palabra" >
+                            <button class="btn-oscuro" id="btnAgregarPalabra">Agregar</button>
+                            <button class="btn-claro" id="btnAgregarPalabraVolver">Volver</button>
+                        </div>
                     </section>
                     <!-- MENÚ PRINCIPAL -->
                     <section id="menuprincipal">
@@ -61,7 +64,7 @@
                                     <p>Obtuviste: <br>"<span id="puntosAlertaJuego"></span> PUNTOS"</p>
                                 </div>
                             </div>
-                            <div id="alerta-muere" class="cartelalerta"> 
+                            <div id="alerta-muere" class="cartelalerta">
                                 <img src="img/fail.svg" alt="">
                                 <div>
                                     <h2>PERDISTE</h2>
@@ -111,7 +114,7 @@
                             <button>M</button>
                         </div>
                     </section>
-                    
+
                 </div>
             </div>
         </div>
