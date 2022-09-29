@@ -206,11 +206,23 @@ input:focus{
     margin-top: 3px;
 }
 #sogamenu{
+    height: 33%;
+    width: auto;
     position: absolute;
-    left: 0;
-    z-index: -1;
-    
+    top: 9%;
+    left: 73%;
+    /* animation: moverSoga 1s infinite alternate; */
 }
+
+@keyframes moverSoga {
+    0%{
+        transform: skewY(-8deg);
+    }
+    100%{
+        transform:skewY(8deg);
+    }
+}
+
 /*Cartel Puntos*/
 #cartelpuntos{
     position: absolute;
