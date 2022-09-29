@@ -178,9 +178,9 @@ input:focus{
     outline: none
 }
 
-#agregarpalabras .btn-add-word{
+#btnAgregarPalabra{
     width: 285px;
-    height: 50px;
+    height: 55px;
 }
 
 
