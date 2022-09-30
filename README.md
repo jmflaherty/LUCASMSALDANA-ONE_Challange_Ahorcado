@@ -1,6 +1,6 @@
 # Ahorcado + Playwright Test
 
-[![Playwright Tests](https://github.com/jmflaherty/LUCASMSALDANA-ONE_Challange_Ahorcado/actions/workflows/playwright.yml/badge.svg)](https://github.com/jmflaherty/LUCASMSALDANA-ONE_Challange_Ahorcado/actions/workflows/playwright.yml)
+[![Playwright Tests](https://github.com/jmflaherty/LUCASMSALDANA-ONE_Challenge_Ahorcado/actions/workflows/playwright.yml/badge.svg)](https://github.com/jmflaherty/LUCASMSALDANA-ONE_Challenge_Ahorcado/actions/workflows/playwright.yml)
 
 Sample project based on the [Ahorcado](https://github.com/LUCASMSALDANA/LUCASMSALDANA-ONE_Challange_Ahorcado) by my friend [Lucas Saldaña](https://github.com/LUCASMSALDANA), adding a Playwright test that always wins the game. Eventually.
 
