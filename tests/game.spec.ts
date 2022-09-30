@@ -4,7 +4,7 @@ let palabras = ["verdugo", "caballero", "espada", "laud", "cruzada"];
 
 test("Play new game", async ({ page }) => {
   const newGameButton = page.locator(".btn-iniciarjuego");
-  const inGameNewGameButton = page.locator(".btn-nuevojuego");
+  const inGameNewGameButton = page.locator("#btn-nuevojuego");
   const loseAlert = page.locator("#alerta-muere");
   const winAlert = page.locator("#alerta-vive");
 
