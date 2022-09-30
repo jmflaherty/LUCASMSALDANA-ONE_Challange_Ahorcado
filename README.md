@@ -1,0 +1,1 @@
+[![Playwright Tests](https://github.com/jmflaherty/LUCASMSALDANA-ONE_Challange_Ahorcado/actions/workflows/playwright.yml/badge.svg)](https://github.com/jmflaherty/LUCASMSALDANA-ONE_Challange_Ahorcado/actions/workflows/playwright.yml)
