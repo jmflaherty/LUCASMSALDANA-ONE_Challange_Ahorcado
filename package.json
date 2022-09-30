@@ -1,0 +1,28 @@
+{
+  "name": "lucasmsaldana-one_challange_ahorcado",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "npx http-server ./static",
+    "test": "npx playwright test",
+    "report": "npx playwright show-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmflaherty/LUCASMSALDANA-ONE_Challange_Ahorcado.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmflaherty/LUCASMSALDANA-ONE_Challange_Ahorcado/issues"
+  },
+  "homepage": "https://github.com/jmflaherty/LUCASMSALDANA-ONE_Challange_Ahorcado#readme",
+  "dependencies": {
+    "http-server": "^14.1.1",
+    "playwright": "^1.26.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.26.1"
+  }
+}
